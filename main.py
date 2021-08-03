@@ -1,5 +1,6 @@
 import pyshorteners
 import inquirer
+import pyperclip
 
 from constants import BITLY_API_KEY
 
@@ -22,3 +23,5 @@ else:
     new_url = pyshorteners.Shortener().tinyurl.short(url)
 
 print(f'Your url: {new_url}')
+
+pyperclip.copy(new_url)
